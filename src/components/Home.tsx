@@ -159,7 +159,7 @@ const Home: React.FC = () => {
   return (
     <>
       <div className={classes.root}>
-        <h1 className={classes.headline}>सिद्धिविनायक युवा मंच</h1>
+        <h1 className={classes.headline}>सिद्धिविनायक युवा मंच, बेलापूर</h1>
         <p className={classes.subtitle}>गणरायाच्या भक्तिमय आठवणी... तुमच्यासोबत शेअर करत आहोत</p>
 
         <div className={classes.albumWrapper}>

@@ -82,6 +82,8 @@ const Contact: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     alert('तुमचा संदेश यशस्वीरित्या पाठवला गेला आहे!');
+    // Reset form fields if needed
+    (e.currentTarget as HTMLFormElement).reset();
   };
 
   return (
