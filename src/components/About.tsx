@@ -27,12 +27,97 @@ const useStyles = mergeStyleSets({
   contentWrapper: {
     position: 'relative',
     zIndex: 2,
+    maxWidth: 1300,
+    margin: '0 auto',
   },
   heading: {
-    fontSize: 40,
-    fontWeight: 800,
+    fontSize: 48,
+    fontWeight: 900,
     marginBottom: 20,
-    color: '#c62828', // Ganpati theme color (red/maroon tone)
+    color: '#c62828',
+    letterSpacing: 2,
+    textShadow: '2px 2px 8px #ffd70055',
+  },
+  banner: {
+    background: 'linear-gradient(90deg, #ffd700 0%, #fffbe7 100%)',
+    color: '#c62828',
+    borderRadius: 18,
+    padding: '32px 24px',
+    marginBottom: 40,
+    boxShadow: '0 4px 24px rgba(255, 215, 0, 0.13)',
+    fontSize: 24,
+    fontWeight: 700,
+    display: 'flex',
+    alignItems: 'center',
+    gap: 18,
+    justifyContent: 'center',
+  },
+  timeline: {
+    margin: '60px auto 40px auto',
+    maxWidth: 900,
+    borderLeft: '4px solid #ffd700',
+    paddingLeft: 32,
+    position: 'relative',
+  },
+  timelineItem: {
+    marginBottom: 36,
+    position: 'relative',
+  },
+  timelineDot: {
+    position: 'absolute',
+    left: -44,
+    top: 0,
+    width: 28,
+    height: 28,
+    background: '#ffd700',
+    borderRadius: '50%',
+    border: '3px solid #c62828',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontSize: 10,
+    color: '#c62828',
+    fontWeight: 900,
+    boxShadow: '0 2px 8px #ffd70055',
+  },
+  highlightsSection: {
+    margin: '60px auto 40px auto',
+    maxWidth: 1100,
+    background: 'rgba(255, 215, 0, 0.08)',
+    borderRadius: 16,
+    padding: 32,
+    boxShadow: '0 4px 24px rgba(255, 215, 0, 0.09)',
+  },
+  highlightsGrid: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+    gap: 32,
+    marginTop: 18,
+  },
+  highlightCard: {
+    background: '#fff',
+    borderRadius: 12,
+    padding: 20,
+    boxShadow: '0 2px 8px #ffd70022',
+    textAlign: 'center',
+    border: '1px solid #ffe082',
+  },
+  highlightIcon: {
+    fontSize: 36,
+    marginBottom: 10,
+    color: '#c62828',
+  },
+  ctaSection: {
+    margin: '60px auto 0 auto',
+    maxWidth: 700,
+    background: 'linear-gradient(90deg, #ffd700 0%, #fffbe7 100%)',
+    borderRadius: 18,
+    padding: '32px 24px',
+    boxShadow: '0 4px 24px rgba(255, 215, 0, 0.13)',
+    textAlign: 'center',
+    color: '#c62828',
+    fontWeight: 700,
+    fontSize: 22,
   },
   subheading: {
     fontSize: 20,
@@ -80,11 +165,81 @@ const About: React.FC = () => {
     <>
       <div className={classes.root}>
         <div className={classes.contentWrapper}>
+          {/* Welcome Banner */}
+          <div className={classes.banner}>
+            <span role="img" aria-label="ganesha">🪔</span>
+            <span>आपले स्वागत आहे! सिद्धिविनायक युवा मंच, बेलापूर</span>
+            <span role="img" aria-label="ganesha">🌺</span>
+          </div>
           <h1 className={classes.heading}>मंडळाबद्दल</h1>
           <p className={classes.subheading}>
-            सिद्धिविनायक युवा मंच हे अहमदनगर जिल्ह्यातील बेलापूर येथील एक अग्रगण्य गणेश मंडळ असून, सामाजिक बांधिलकी, सांस्कृतिक कार्यक्रम आणि भक्तिमय गणेशोत्सवाचे आयोजन हे आमचे प्रमुख उद्दिष्ट आहे. आमचा रजिस्ट्रेशन नंबर: NK. MH/595/2011/AH
+            सिद्धिविनायक युवा मंच हे अहमदनगर जिल्ह्यातील बेलापूर येथील एक अग्रगण्य गणेश मंडळ असून, सामाजिक बांधिलकी, सांस्कृतिक कार्यक्रम आणि भक्तिमय गणेशोत्सवाचे आयोजन हे आमचे प्रमुख उद्दिष्ट आहे. आमचा रजिस्ट्रेशन नंबर: <b>NK. MH/595/2011/AH</b>
           </p>
 
+          {/* Timeline Section */}
+          <div className={classes.timeline}>
+            <div className={classes.timelineItem}>
+              <div className={classes.timelineDot}>2011</div>
+              <div><b>स्थापना:</b> मंडळाची स्थापना आणि पहिला गणेशोत्सव.</div>
+            </div>
+            <div className={classes.timelineItem}>
+              <div className={classes.timelineDot}>2014</div>
+              <div><b>पहिली वृक्षारोपण मोहीम:</b> सामाजिक उपक्रमांची सुरुवात.</div>
+            </div>
+            <div className={classes.timelineItem}>
+              <div className={classes.timelineDot}>2017</div>
+              <div><b>महिला सक्षमीकरण:</b> महिला व्याख्यानमालेचे आयोजन.</div>
+            </div>
+            <div className={classes.timelineItem}>
+              <div className={classes.timelineDot}>2020</div>
+              <div><b>डिजिटल गणेशोत्सव:</b> ऑनलाईन कार्यक्रम आणि डिजिटल सहभाग.</div>
+            </div>
+            <div className={classes.timelineItem}>
+              <div className={classes.timelineDot}>2024</div>
+              <div><b>500+ झाडे लावली:</b> हरित उपक्रमात मोठी भर.</div>
+            </div>
+          </div>
+
+          {/* Highlights Section */}
+          <div className={classes.highlightsSection}>
+            <h2 style={{ color: '#c62828', fontWeight: 800, marginBottom: 18 }}>आमच्या प्रमुख वैशिष्ट्ये</h2>
+            <div className={classes.highlightsGrid}>
+              <div className={classes.highlightCard}>
+                <div className={classes.highlightIcon}>🌳</div>
+                <div>500+ झाडे लावली</div>
+              </div>
+              <div className={classes.highlightCard}>
+                <div className={classes.highlightIcon}>👥</div>
+                <div>50+ सक्रिय सदस्य</div>
+              </div>
+              <div className={classes.highlightCard}>
+                <div className={classes.highlightIcon}>🎉</div>
+                <div>13+ वर्षांचा अनुभव</div>
+              </div>
+              <div className={classes.highlightCard}>
+                <div className={classes.highlightIcon}>🏆</div>
+                <div>20+ मुलांच्या स्पर्धा</div>
+              </div>
+              <div className={classes.highlightCard}>
+                <div className={classes.highlightIcon}>🩸</div>
+                <div>10+ रक्तदान शिबिर</div>
+              </div>
+              <div className={classes.highlightCard}>
+                <div className={classes.highlightIcon}>🌿</div>
+                <div>पर्यावरणपूरक उपक्रम</div>
+              </div>
+              <div className={classes.highlightCard}>
+                <div className={classes.highlightIcon}>📚</div>
+                <div>शैक्षणिक मदत व मार्गदर्शन</div>
+              </div>
+              <div className={classes.highlightCard}>
+                <div className={classes.highlightIcon}>🤝</div>
+                <div>समाजसेवा आणि एकात्मता</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Existing Content Cards */}
           <div className={classes.contentGrid}>
             <div className={classes.card}>
               <h3 className={classes.cardTitle}>आमचे ध्येय</h3>
@@ -122,6 +277,12 @@ const About: React.FC = () => {
                 डिजिटल युगात पारंपरिक मूल्यांना जपून, आधुनिक तंत्रज्ञानाचा वापर करत समाजसेवा करणे.
               </p>
             </div>
+          </div>
+
+          {/* Call to Action Section */}
+          <div className={classes.ctaSection}>
+            <span role="img" aria-label="join">🙏</span> आमच्या सेवाभावी कार्यात सहभागी व्हा! <span role="img" aria-label="tree">🌳</span> <br />
+            <span style={{ fontSize: 18, fontWeight: 400 }}>संपर्क: <b>rohit@siddhivinayak.com</b> | <b>+91 9766599007</b></span>
           </div>
         </div>
       </div>
