@@ -178,11 +178,12 @@ const useStyles = mergeStyleSets({
     fontWeight: 700,
     marginBottom: 15,
     color: '#333',
+    lineHeight: 24,
   },
   featuredExcerpt: {
     fontSize: 16,
     color: '#666',
-    lineHeight: 1.6,
+    lineHeight: 24,
     marginBottom: 20,
   },
   sidebar: {

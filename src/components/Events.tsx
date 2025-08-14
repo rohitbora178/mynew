@@ -112,11 +112,12 @@ const useStyles = mergeStyleSets({
     fontWeight: 600,
     marginBottom: 12,
     color: '#333',
+    lineHeight: 24,
   },
   eventDescription: {
     fontSize: 16,
     color: '#666',
-    lineHeight: 1.6,
+    lineHeight: 24,
     marginBottom: 16,
   },
   eventLocation: {
