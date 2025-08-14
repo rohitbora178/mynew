@@ -185,6 +185,11 @@ const useStyles = mergeStyleSets({
     boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
     width: '45%',
     position: 'relative',
+    '@media (max-width: 768px)': {
+      width: '100%',
+      margin: '0',
+      textAlign: 'left',
+    },
   },
   timelineLeft: {
     marginRight: 'auto',
