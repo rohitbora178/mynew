@@ -78,7 +78,7 @@ const useStyles = mergeStyleSets({
   },
   serviceDescription: {
     fontSize: 16,
-    lineHeight: 1.6,
+    lineHeight: 24,
     color: '#666',
     marginBottom: 20,
   },

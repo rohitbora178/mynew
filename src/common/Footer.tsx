@@ -56,6 +56,58 @@ const useStyles = mergeStyleSets({
     color: '#777',
     fontSize: 13,
   },
+  socialSection: {
+    width: '100%',
+    textAlign: 'center',
+    marginTop: 30,
+    paddingTop: 20,
+    borderTop: '1px solid #333',
+  },
+  socialTitle: {
+    fontSize: 16,
+    fontWeight: 600,
+    marginBottom: 15,
+    color: '#00b2ff',
+  },
+  socialLinks: {
+    display: 'flex',
+    justifyContent: 'center',
+    gap: 20,
+    flexWrap: 'wrap',
+  },
+  socialLink: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: 8,
+    padding: '10px 20px',
+    backgroundColor: '#333',
+    borderRadius: 25,
+    textDecoration: 'none',
+    color: '#fff',
+    fontSize: 14,
+    fontWeight: 500,
+    transition: 'all 0.3s ease',
+    cursor: 'pointer',
+    ':hover': {
+      transform: 'translateY(-2px)',
+      boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
+    },
+  },
+  facebookLink: {
+    ':hover': {
+      backgroundColor: '#1877f2',
+      boxShadow: '0 4px 12px rgba(24, 119, 242, 0.3)',
+    },
+  },
+  instagramLink: {
+    ':hover': {
+      background: 'linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)',
+      boxShadow: '0 4px 12px rgba(225, 48, 108, 0.3)',
+    },
+  },
+  facebookIcon: {
+    fontSize: 18,
+  },
 });
 
 const Footer: React.FC = () => {
@@ -76,6 +128,14 @@ const Footer: React.FC = () => {
 
   const handleMapsLocation = () => {
     window.open('https://maps.google.com/?q=Belapur,Maharashtra', '_blank');
+  };
+
+  const handleFacebookLink = () => {
+    window.open('https://www.facebook.com/siddhivinayak.yuva.manch.2025', '_blank');
+  };
+
+  const handleInstagramLink = () => {
+    window.open('https://www.instagram.com/siddhivinayakyuvamanch/', '_blank');
   };
 
   return (
@@ -107,6 +167,20 @@ const Footer: React.FC = () => {
           <div className={classes.contact} onClick={handleMapsLocation}>📍 बेलापूर, महाराष्ट्र</div>
           <div className={classes.contact} onClick={handlePhoneCall}>📞 +91 9766599007</div>
           <div className={classes.contact} onClick={handleEmail}>📧 siddhivinayakyuvamanch@gmail.com</div>
+        </div>
+
+        <div className={classes.socialSection}>
+          <div className={classes.socialTitle}>आमच्याशी जुडा</div>
+          <div className={classes.socialLinks}>
+            <div className={`${classes.socialLink} ${classes.facebookLink}`} onClick={handleFacebookLink}>
+              <span className={classes.facebookIcon}>📘</span>
+              Facebook वर फॉलो करा
+            </div>
+            <div className={`${classes.socialLink} ${classes.instagramLink}`} onClick={handleInstagramLink}>
+              <span className={classes.facebookIcon}>📷</span>
+              Instagram वर फॉलो करा
+            </div>
+          </div>
         </div>
       </div>
 
