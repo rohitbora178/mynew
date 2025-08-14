@@ -1,7 +1,8 @@
 import * as React from 'react';
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { mergeStyleSets } from '@fluentui/react/lib/Styling';
 import { IconButton } from '@fluentui/react/lib/Button';
+import ConfettiEffect from './ConfettiEffect';
 import Footer from '../common/Footer';
 import image1 from '../images/image 1.jpg';
 import image2 from '../images/image 2.jpg';
@@ -150,6 +151,14 @@ const photos = [
 const Home: React.FC = () => {
   const classes = useStyles;
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [showConfetti, setShowConfetti] = useState(true);
+
+  useEffect(() => {
+    if (showConfetti) {
+      const timer = setTimeout(() => setShowConfetti(false), 7000);
+      return () => clearTimeout(timer);
+    }
+  }, [showConfetti]);
 
   const scroll = (direction: 'left' | 'right') => {
     const container = scrollRef.current;
@@ -159,10 +168,9 @@ const Home: React.FC = () => {
     }
   };
 
-  
-
   return (
     <>
+      {showConfetti && <ConfettiEffect />}
       <div className={classes.root}>
         <h1 className={classes.headline}>सिद्धिविनायक युवा मंच, बेलापूर</h1>
         <p className={classes.subtitle}>गणरायाच्या भक्तिमय आठवणी... तुमच्यासोबत शेअर करत आहोत</p>
