@@ -226,6 +226,49 @@ const Home: React.FC = () => {
         </div>
       </section>
 
+      <section className={`${classes.section} ${classes.sectionLight}`}>
+        <h2 className={classes.sectionHeading}>आमच्या यशगाथा</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 40, maxWidth: 800, margin: '0 auto', textAlign: 'center' }}>
+          <div>
+            <div style={{ fontSize: 48, fontWeight: 800, color: '#c62828', marginBottom: 10 }}>10+</div>
+            <div style={{ fontSize: 16, color: '#666' }}>वर्षांचा अनुभव</div>
+          </div>
+          <div>
+            <div style={{ fontSize: 48, fontWeight: 800, color: '#c62828', marginBottom: 10 }}>50K+</div>
+            <div style={{ fontSize: 16, color: '#666' }}>भक्तांची सेवा</div>
+          </div>
+          <div>
+            <div style={{ fontSize: 48, fontWeight: 800, color: '#c62828', marginBottom: 10 }}>500+</div>
+            <div style={{ fontSize: 16, color: '#666' }}>झाडे लावली</div>
+          </div>
+          <div>
+            <div style={{ fontSize: 48, fontWeight: 800, color: '#c62828', marginBottom: 10 }}>25+</div>
+            <div style={{ fontSize: 16, color: '#666' }}>सक्रिय सदस्य</div>
+          </div>
+        </div>
+      </section>
+
+      <section className={`${classes.section} ${classes.sectionDark}`}>
+        <h2 className={classes.sectionHeading}>सामाजिक उपक्रम</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 40, maxWidth: 1200, margin: '0 auto' }}>
+          <div style={{ backgroundColor: '#fff', padding: 30, borderRadius: 16, boxShadow: '0 8px 24px rgba(0,0,0,0.1)', textAlign: 'center' }}>
+            <div style={{ fontSize: 48, marginBottom: 20 }}>🏫</div>
+            <h3 style={{ color: '#c62828', marginBottom: 15 }}>शिक्षण सहाय्य</h3>
+            <p style={{ color: '#666' }}>गरीब मुलांना शिक्षणासाठी पुस्तके आणि आर्थिक मदत</p>
+          </div>
+          <div style={{ backgroundColor: '#fff', padding: 30, borderRadius: 16, boxShadow: '0 8px 24px rgba(0,0,0,0.1)', textAlign: 'center' }}>
+            <div style={{ fontSize: 48, marginBottom: 20 }}>🍽️</div>
+            <h3 style={{ color: '#c62828', marginBottom: 15 }}>अन्नदान</h3>
+            <p style={{ color: '#666' }}>गरजूंना नियमित अन्न वितरणाचे कार्यक्रम</p>
+          </div>
+          <div style={{ backgroundColor: '#fff', padding: 30, borderRadius: 16, boxShadow: '0 8px 24px rgba(0,0,0,0.1)', textAlign: 'center' }}>
+            <div style={{ fontSize: 48, marginBottom: 20 }}>🩺</div>
+            <h3 style={{ color: '#c62828', marginBottom: 15 }}>आरोग्य तपासणी</h3>
+            <p style={{ color: '#666' }}>मोफत आरोग्य तपासणी आणि औषध वितरण</p>
+          </div>
+        </div>
+      </section>
+
 
       <Footer />
     </>

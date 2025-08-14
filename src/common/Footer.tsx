@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { mergeStyleSets } from '@fluentui/react/lib/Styling';
+import { useNavigate } from 'react-router-dom';
 
 const useStyles = mergeStyleSets({
   footer: {
@@ -30,14 +31,23 @@ const useStyles = mergeStyleSets({
     fontSize: 14,
     marginBottom: 8,
     textDecoration: 'none',
+    cursor: 'pointer',
+    transition: 'all 0.3s ease',
     ':hover': {
-      color: '#fff',
+      color: '#00b2ff',
+      textDecoration: 'underline',
+      transform: 'translateX(5px)',
     },
   },
   contact: {
     fontSize: 14,
     color: '#ccc',
     marginBottom: 6,
+    cursor: 'pointer',
+    transition: 'color 0.3s ease',
+    ':hover': {
+      color: '#00b2ff',
+    },
   },
   bottomBar: {
     textAlign: 'center',
@@ -50,36 +60,53 @@ const useStyles = mergeStyleSets({
 
 const Footer: React.FC = () => {
   const classes = useStyles;
+  const navigate = useNavigate();
+
+  const handleNavigation = (path: string) => {
+    navigate(path);
+  };
+
+  const handlePhoneCall = () => {
+    window.open('tel:+919766599007', '_self');
+  };
+
+  const handleEmail = () => {
+    window.open('mailto:siddhivinayakyuvamanch@gmail.com', '_self');
+  };
+
+  const handleMapsLocation = () => {
+    window.open('https://maps.google.com/?q=Belapur,Maharashtra', '_blank');
+  };
 
   return (
     <footer>
       <div className={classes.footer}>
         <div className={classes.column}>
           <div className={classes.title}>आमच्या सेवा</div>
-          <a className={classes.link} >गणेशोत्सव आयोजन</a>
-          <a className={classes.link} >सांस्कृतिक कार्यक्रम</a>
-          <a className={classes.link} >छायाचित्रण व व्हिडिओ</a>
-          <a className={classes.link} >स्मरणिका व अल्बम</a>
+          <a className={classes.link} onClick={() => handleNavigation('/services')}>गणेशोत्सव आयोजन</a>
+          <a className={classes.link} onClick={() => handleNavigation('/services')}>सांस्कृतिक कार्यक्रम</a>
+          <a className={classes.link} onClick={() => handleNavigation('/services')}>छायाचित्रण व व्हिडिओ</a>
+          <a className={classes.link} onClick={() => handleNavigation('/services')}>स्मरणिका व अल्बम</a>
         </div>
 
         <div className={classes.column}>
           <div className={classes.title}>गॅलरी</div>
-          <a className={classes.link} >फोटो गॅलरी</a>
-          <a className={classes.link} >व्हिडिओ गॅलरी</a>
+          <a className={classes.link} onClick={() => handleNavigation('/gallery')}>फोटो गॅलरी</a>
+          <a className={classes.link} onClick={() => handleNavigation('/gallery')}>व्हिडिओ गॅलरी</a>
         </div>
 
         <div className={classes.column}>
           <div className={classes.title}>मंडळाबद्दल</div>
-          <a className={classes.link} >इतिहास</a>
-          <a className={classes.link} >संपर्क करा</a>
-          <a className={classes.link} >कार्यकारी मंडळ</a>
+          <a className={classes.link} onClick={() => handleNavigation('/about')}>इतिहास</a>
+          <a className={classes.link} onClick={() => handleNavigation('/contact')}>संपर्क करा</a>
+          <a className={classes.link} onClick={() => handleNavigation('/team')}>कार्यकारी मंडळ</a>
         </div>
 
         <div className={classes.column}>
           <div className={classes.title}>संपर्क</div>
-          <div className={classes.contact}>📍 बेलापूर, महाराष्ट्र</div>
-          <div className={classes.contact}>📞 +91 9766599007</div>
-          <div className={classes.contact}>📧 siddhivinayakyuvamanch@gmail.com</div>
+          <div className={classes.contact} onClick={handleMapsLocation}>📍 बेलापूर, महाराष्ट्र</div>
+          <div className={classes.contact} onClick={handlePhoneCall}>📞 +91 9766599007</div>
+          <div className={classes.contact} onClick={handleEmail}>📧 siddhivinayakyuvamanch@gmail.com</div>
         </div>
       </div>
 

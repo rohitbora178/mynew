@@ -84,6 +84,24 @@ const About: React.FC = () => {
               भक्ती, पारदर्शकता, समाजसेवा आणि एकात्मता ही आमच्या कार्यपद्धतीची मूलभूत तत्त्वे आहेत.
             </p>
           </div>
+          <div className={classes.card}>
+            <h3 className={classes.cardTitle}>इतिहास</h3>
+            <p className={classes.cardText}>
+              2021 मध्ये स्थापन झालेले हे मंडळ आज बेलापूर परिसरातील सर्वात मोठे आणि सक्रिय मंडळ बनले आहे.
+            </p>
+          </div>
+          <div className={classes.card}>
+            <h3 className={classes.cardTitle}>सामाजिक जबाबदारी</h3>
+            <p className={classes.cardText}>
+              शिक्षण, आरोग्य, पर्यावरण आणि सामाजिक न्यायासाठी आम्ही नियमित उपक्रम राबवतो.
+            </p>
+          </div>
+          <div className={classes.card}>
+            <h3 className={classes.cardTitle}>भविष्याची योजना</h3>
+            <p className={classes.cardText}>
+              डिजिटल युगात पारंपरिक मूल्यांना जपून, आधुनिक तंत्रज्ञानाचा वापर करत समाजसेवा करणे.
+            </p>
+          </div>
         </div>
       </div>
 

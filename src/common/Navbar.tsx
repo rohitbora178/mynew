@@ -106,13 +106,25 @@ const Navbar: React.FC = () => {
   const navItems = (
     <>
       <Link className={styles.link} onClick={() => handleNavigation(navigate, '/')}>
-        Home
+        होम
       </Link>
       <Link className={styles.link} onClick={() => handleNavigation(navigate, '/about')}>
-        About
+        आमच्याबद्दल
+      </Link>
+      <Link className={styles.link} onClick={() => handleNavigation(navigate, '/services')}>
+        सेवा
+      </Link>
+      <Link className={styles.link} onClick={() => handleNavigation(navigate, '/events')}>
+        कार्यक्रम
+      </Link>
+      <Link className={styles.link} onClick={() => handleNavigation(navigate, '/team')}>
+        टीम
+      </Link>
+      <Link className={styles.link} onClick={() => handleNavigation(navigate, '/blog')}>
+        बातम्या
       </Link>
       <Link className={styles.link} onClick={() => handleNavigation(navigate, '/contact')}>
-        Contact
+        संपर्क
       </Link>
     </>
   );
