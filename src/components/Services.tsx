@@ -289,7 +289,7 @@ const Services: React.FC = () => {
                 <p className={classes.serviceDescription}>{service.description}</p>
                 <div className={classes.serviceFeatures}>
                   {service.features.map((feature, idx) => (
-                    <div key={idx}>{feature}</div>
+                    <div key={idx} style={{lineHeight: 1.8 , color: '#555'}}>{feature}</div>
                   ))}
                 </div>
               </div>
