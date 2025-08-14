@@ -132,6 +132,11 @@ const useStyles = mergeStyleSets({
     from: { opacity: 0, transform: 'translateY(20px)' },
     to: { opacity: 1, transform: 'translateY(0)' },
   },
+  '@keyframes pulse': {
+    '0%': { transform: 'scale(1)', boxShadow: '0 4px 15px rgba(255, 215, 0, 0.4)' },
+    '50%': { transform: 'scale(1.05)', boxShadow: '0 6px 20px rgba(255, 215, 0, 0.6)' },
+    '100%': { transform: 'scale(1)', boxShadow: '0 4px 15px rgba(255, 215, 0, 0.4)' },
+  },
 });
 
 const photos = [
@@ -161,6 +166,21 @@ const Home: React.FC = () => {
       <div className={classes.root}>
         <h1 className={classes.headline}>सिद्धिविनायक युवा मंच, बेलापूर</h1>
         <p className={classes.subtitle}>गणरायाच्या भक्तिमय आठवणी... तुमच्यासोबत शेअर करत आहोत</p>
+        
+        <div style={{ 
+          backgroundColor: 'rgba(255, 215, 0, 0.9)', 
+          color: '#000', 
+          padding: '15px 30px', 
+          borderRadius: '25px', 
+          fontSize: '18px', 
+          fontWeight: '700',
+          marginBottom: '30px',
+          border: '2px solid #FFD700',
+          boxShadow: '0 4px 15px rgba(255, 215, 0, 0.4)',
+          animation: 'pulse 2s infinite'
+        }}>
+          📋 रजिस्ट्रेशन नंबर: NK. MH/595/2011/AH | स्थापना: 2011
+        </div>
 
         <div className={classes.albumWrapper}>
           <IconButton
@@ -217,6 +237,35 @@ const Home: React.FC = () => {
         </div>
       </section>
 
+      <section className={`${classes.section}`} style={{ backgroundColor: '#1e3a8a', color: '#fff' }}>
+        <h2 className={classes.sectionHeading} style={{ color: '#FFD700' }}>प्रमाणित आणि नोंदणीकृत संस्था</h2>
+        <div style={{ 
+          maxWidth: 600, 
+          margin: '0 auto', 
+          backgroundColor: 'rgba(255, 255, 255, 0.1)', 
+          padding: '40px', 
+          borderRadius: '20px',
+          border: '3px solid #FFD700',
+          boxShadow: '0 8px 32px rgba(255, 215, 0, 0.3)'
+        }}>
+          <div style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '20px', color: '#FFD700' }}>
+            🏛️ अधिकृत रजिस्ट्रेशन माहिती
+          </div>
+          <div style={{ fontSize: '32px', fontWeight: '800', marginBottom: '15px', letterSpacing: '2px' }}>
+            NK. MH/595/2011/AH
+          </div>
+          <div style={{ fontSize: '18px', marginBottom: '10px' }}>
+            📅 स्थापना वर्ष: <strong>2011</strong>
+          </div>
+          <div style={{ fontSize: '18px', marginBottom: '10px' }}>
+            📍 स्थान: <strong>बेलापूर, अहमदनगर जिल्हा</strong>
+          </div>
+          <div style={{ fontSize: '18px' }}>
+            ⭐ <strong>13+ वर्षांची विश्वसनीयता आणि सेवा</strong>
+          </div>
+        </div>
+      </section>
+
       <section className={`${classes.section} ${classes.greenSection}`}>
         <h2 className={classes.sectionHeading}>आमचे ध्येय – वृक्षारोपण आणि हरित पर्यावरण</h2>
         <div style={{ maxWidth: 800, margin: '0 auto', fontSize: 18, lineHeight: 1.8 }}>
@@ -230,8 +279,8 @@ const Home: React.FC = () => {
         <h2 className={classes.sectionHeading}>आमच्या यशगाथा</h2>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 40, maxWidth: 800, margin: '0 auto', textAlign: 'center' }}>
           <div>
-            <div style={{ fontSize: 48, fontWeight: 800, color: '#c62828', marginBottom: 10 }}>10+</div>
-            <div style={{ fontSize: 16, color: '#666' }}>वर्षांचा अनुभव</div>
+            <div style={{ fontSize: 48, fontWeight: 800, color: '#c62828', marginBottom: 10 }}>13+</div>
+            <div style={{ fontSize: 16, color: '#666' }}>वर्षांचा अनुभव (2011 पासून)</div>
           </div>
           <div>
             <div style={{ fontSize: 48, fontWeight: 800, color: '#c62828', marginBottom: 10 }}>50K+</div>
@@ -242,7 +291,7 @@ const Home: React.FC = () => {
             <div style={{ fontSize: 16, color: '#666' }}>झाडे लावली</div>
           </div>
           <div>
-            <div style={{ fontSize: 48, fontWeight: 800, color: '#c62828', marginBottom: 10 }}>25+</div>
+            <div style={{ fontSize: 48, fontWeight: 800, color: '#c62828', marginBottom: 10 }}>12+</div>
             <div style={{ fontSize: 16, color: '#666' }}>सक्रिय सदस्य</div>
           </div>
         </div>

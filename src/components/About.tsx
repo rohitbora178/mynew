@@ -8,6 +8,25 @@ const useStyles = mergeStyleSets({
     backgroundColor: '#fff',
     color: '#333',
     textAlign: 'center',
+    backgroundImage: 'url(https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80)',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundAttachment: 'fixed',
+    position: 'relative',
+    '::before': {
+      content: '""',
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      backgroundColor: 'rgba(255, 255, 255, 0.95)',
+      zIndex: 1,
+    },
+  },
+  contentWrapper: {
+    position: 'relative',
+    zIndex: 2,
   },
   heading: {
     fontSize: 40,
@@ -60,47 +79,49 @@ const About: React.FC = () => {
   return (
     <>
       <div className={classes.root}>
-        <h1 className={classes.heading}>मंडळाबद्दल</h1>
-        <p className={classes.subheading}>
-          सिद्धिविनायक युवा मंच हे पुण्यातील एक अग्रगण्य गणेश मंडळ असून, सामाजिक बांधिलकी, सांस्कृतिक कार्यक्रम आणि भक्तिमय गणेशोत्सवाचे आयोजन हे आमचे प्रमुख उद्दिष्ट आहे.
-        </p>
+        <div className={classes.contentWrapper}>
+          <h1 className={classes.heading}>मंडळाबद्दल</h1>
+          <p className={classes.subheading}>
+            सिद्धिविनायक युवा मंच हे अहमदनगर जिल्ह्यातील बेलापूर येथील एक अग्रगण्य गणेश मंडळ असून, सामाजिक बांधिलकी, सांस्कृतिक कार्यक्रम आणि भक्तिमय गणेशोत्सवाचे आयोजन हे आमचे प्रमुख उद्दिष्ट आहे. आमचा रजिस्ट्रेशन नंबर: NK. MH/595/2011/AH
+          </p>
 
-        <div className={classes.contentGrid}>
-          <div className={classes.card}>
-            <h3 className={classes.cardTitle}>आमचे ध्येय</h3>
-            <p className={classes.cardText}>
-              समाजात भक्ती, संस्कृती आणि ऐक्याची भावना निर्माण करणे आणि गणेशोत्सवाच्या माध्यमातून सकारात्मक ऊर्जा पसरवणे.
-            </p>
-          </div>
-          <div className={classes.card}>
-            <h3 className={classes.cardTitle}>आमची दृष्टिकोन</h3>
-            <p className={classes.cardText}>
-              युवा पिढीला एकत्र आणणारे, सामाजिक उपक्रमांना चालना देणारे आणि प्रेरणादायी उपक्रम राबवणारे मंडळ बनणे.
-            </p>
-          </div>
-          <div className={classes.card}>
-            <h3 className={classes.cardTitle}>आमच्या मूल्यांची शिदोरी</h3>
-            <p className={classes.cardText}>
-              भक्ती, पारदर्शकता, समाजसेवा आणि एकात्मता ही आमच्या कार्यपद्धतीची मूलभूत तत्त्वे आहेत.
-            </p>
-          </div>
-          <div className={classes.card}>
-            <h3 className={classes.cardTitle}>इतिहास</h3>
-            <p className={classes.cardText}>
-              2012 मध्ये स्थापन झालेले हे मंडळ आज बेलापूर परिसरातील सर्वात मोठे आणि सक्रिय मंडळ बनले आहे.
-            </p>
-          </div>
-          <div className={classes.card}>
-            <h3 className={classes.cardTitle}>सामाजिक जबाबदारी</h3>
-            <p className={classes.cardText}>
-              शिक्षण, आरोग्य, पर्यावरण आणि सामाजिक न्यायासाठी आम्ही नियमित उपक्रम राबवतो.
-            </p>
-          </div>
-          <div className={classes.card}>
-            <h3 className={classes.cardTitle}>भविष्याची योजना</h3>
-            <p className={classes.cardText}>
-              डिजिटल युगात पारंपरिक मूल्यांना जपून, आधुनिक तंत्रज्ञानाचा वापर करत समाजसेवा करणे.
-            </p>
+          <div className={classes.contentGrid}>
+            <div className={classes.card}>
+              <h3 className={classes.cardTitle}>आमचे ध्येय</h3>
+              <p className={classes.cardText}>
+                समाजात भक्ती, संस्कृती आणि ऐक्याची भावना निर्माण करणे आणि गणेशोत्सवाच्या माध्यमातून सकारात्मक ऊर्जा पसरवणे.
+              </p>
+            </div>
+            <div className={classes.card}>
+              <h3 className={classes.cardTitle}>आमची दृष्टिकोन</h3>
+              <p className={classes.cardText}>
+                युवा पिढीला एकत्र आणणारे, सामाजिक उपक्रमांना चालना देणारे आणि प्रेरणादायी उपक्रम राबवणारे मंडळ बनणे.
+              </p>
+            </div>
+            <div className={classes.card}>
+              <h3 className={classes.cardTitle}>आमच्या मूल्यांची शिदोरी</h3>
+              <p className={classes.cardText}>
+                भक्ती, पारदर्शकता, समाजसेवा आणि एकात्मता ही आमच्या कार्यपद्धतीची मूलभूत तत्त्वे आहेत.
+              </p>
+            </div>
+            <div className={classes.card}>
+              <h3 className={classes.cardTitle}>आमचा इतिहास</h3>
+              <p className={classes.cardText}>
+                2011 मध्ये स्थापन झालेले हे मंडळ आज बेलापूर परिसरातील सर्वात मोठे आणि सक्रिय मंडळ बनले आहे. रजिस्ट्रेशन नंबर NK. MH/595/2011/AH सह नोंदणीकृत आमचे मंडळ 13 वर्षांपासून निरंतर सेवेत आहे.
+              </p>
+            </div>
+            <div className={classes.card}>
+              <h3 className={classes.cardTitle}>सामाजिक जबाबदारी</h3>
+              <p className={classes.cardText}>
+                शिक्षण, आरोग्य, पर्यावरण आणि सामाजिक न्यायासाठी आम्ही नियमित उपक्रम राबवतो. महिला सक्षमीकरणासाठी विशेष व्याख्यानमालेचे आयोजन.
+              </p>
+            </div>
+            <div className={classes.card}>
+              <h3 className={classes.cardTitle}>भविष्याची योजना</h3>
+              <p className={classes.cardText}>
+                डिजिटल युगात पारंपरिक मूल्यांना जपून, आधुनिक तंत्रज्ञानाचा वापर करत समाजसेवा करणे.
+              </p>
+            </div>
           </div>
         </div>
       </div>
