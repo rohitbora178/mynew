@@ -127,7 +127,7 @@ const Footer: React.FC = () => {
   };
 
   const handleMapsLocation = () => {
-    window.open('https://maps.google.com/?q=Belapur,Maharashtra', '_blank');
+    window.open('https://maps.google.com/?q=Belapur+Near+Shrirampur+Ahmednagar+District+Maharashtra', '_blank');
   };
 
   const handleFacebookLink = () => {
@@ -164,7 +164,7 @@ const Footer: React.FC = () => {
 
         <div className={classes.column}>
           <div className={classes.title}>संपर्क</div>
-          <div className={classes.contact} onClick={handleMapsLocation}>📍 बेलापूर, महाराष्ट्र</div>
+          <div className={classes.contact} onClick={handleMapsLocation}>📍 बेलापूर, जवळ श्रीरामपूर, अहमदनगर जिल्हा</div>
           <div className={classes.contact} onClick={handlePhoneCall}>📞 +91 9766599007</div>
           <div className={classes.contact} onClick={handleEmail}>📧 siddhivinayakyuvamanch@gmail.com</div>
         </div>

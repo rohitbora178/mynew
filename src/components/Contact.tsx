@@ -131,6 +131,19 @@ const useStyles = mergeStyleSets({
     maxWidth: 800,
     margin: '0 auto',
   },
+  mapContainer: {
+    maxWidth: 800,
+    margin: '0 auto',
+    borderRadius: 16,
+    overflow: 'hidden',
+    boxShadow: '0 8px 24px rgba(0,0,0,0.15)',
+  },
+  mapFrame: {
+    width: '100%',
+    height: 400,
+    border: 'none',
+    borderRadius: 16,
+  },
 });
 
 const Contact: React.FC = () => {
@@ -192,8 +205,8 @@ const Contact: React.FC = () => {
             <h3 className={classes.infoTitle}>आमचा पत्ता</h3>
             <p className={classes.infoText}>
               सिद्धिविनायक युवा मंच<br />
-              सेक्टर 15, बेलापूर<br />
-              नवी मुंबई - 400614<br />
+              बेलापूर, जवळ श्रीरामपूर<br />
+              अहमदनगर जिल्हा - 413715<br />
               महाराष्ट्र, भारत
             </p>
           </div>
@@ -236,8 +249,15 @@ const Contact: React.FC = () => {
       {/* Map Section */}
       <div className={classes.mapSection}>
         <h2 className={classes.mapTitle}>आमचे स्थान</h2>
-        <div className={classes.mapPlaceholder}>
-          🗺️ इंटरऍक्टिव्ह नकाशा येथे दिसेल
+        <div className={classes.mapContainer}>
+          <iframe
+            className={classes.mapFrame}
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30234.567891234!2d74.6397!3d19.0876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdcf1e6e6b5c65%3A0x8b9b4e4e4e4e4e4e!2sBelapur%2C%20Near%20Shrirampur%2C%20Ahmednagar%20District%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1692012345678!5m2!1sen!2sin"
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="सिद्धिविनायक युवा मंच - बेलापूर, जवळ श्रीरामपूर, अहमदनगर जिल्हा"
+          />
         </div>
       </div>
 

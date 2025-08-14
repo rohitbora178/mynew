@@ -87,7 +87,7 @@ const About: React.FC = () => {
           <div className={classes.card}>
             <h3 className={classes.cardTitle}>इतिहास</h3>
             <p className={classes.cardText}>
-              2021 मध्ये स्थापन झालेले हे मंडळ आज बेलापूर परिसरातील सर्वात मोठे आणि सक्रिय मंडळ बनले आहे.
+              2012 मध्ये स्थापन झालेले हे मंडळ आज बेलापूर परिसरातील सर्वात मोठे आणि सक्रिय मंडळ बनले आहे.
             </p>
           </div>
           <div className={classes.card}>
