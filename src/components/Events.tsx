@@ -163,6 +163,9 @@ const useStyles = mergeStyleSets({
       width: 2,
       backgroundColor: '#c62828',
       transform: 'translateX(-50%)',
+      '@media (max-width: 768px)': {
+        display: 'none',
+      },
     },
   },
   timelineItem: {
@@ -170,6 +173,10 @@ const useStyles = mergeStyleSets({
     alignItems: 'center',
     marginBottom: 40,
     position: 'relative',
+    '@media (max-width: 768px)': {
+      flexDirection: 'column',
+      alignItems: 'stretch',
+    },
   },
   timelineContent: {
     backgroundColor: '#fff',
@@ -196,6 +203,9 @@ const useStyles = mergeStyleSets({
     backgroundColor: '#c62828',
     borderRadius: '50%',
     zIndex: 2,
+    '@media (max-width: 768px)': {
+      display: 'none',
+    },
   },
 });
 
