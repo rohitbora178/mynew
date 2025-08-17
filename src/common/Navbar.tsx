@@ -25,24 +25,35 @@ const colors = {
 
 const styles = mergeStyleSets({
   navbar: {
-    backgroundColor: colors.navbarBg,
+    background: 'rgba(30,30,47,0.85)',
     color: colors.textPrimary,
-    padding: '0 24px',
-    height: 56,
+    padding: '0 32px',
+    height: 64,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-    boxShadow: '0 2px 6px rgba(0,0,0,0.3)',
+    boxShadow: '0 4px 24px rgba(79,140,255,0.10)',
+    backdropFilter: 'blur(8px)',
+    borderRadius: '0',
+    position: 'sticky',
+    top: 0,
+    zIndex: 100,
+    transition: 'background 0.3s',
   },
   logoImage: {
-    height: 40,
+    height: 48,
     cursor: 'pointer',
     userSelect: 'none',
+    borderRadius: 12,
+    boxShadow: '0 2px 8px rgba(245,66,145,0.10)',
+    transition: 'transform 0.2s',
+    ':hover': {
+      transform: 'scale(1.07) rotate(-2deg)',
+    },
   },
   navLinks: {
     display: 'flex',
-
-    gap: 32,
+    gap: 40,
   },
   panelLinks: {
     display: 'flex',
@@ -52,12 +63,30 @@ const styles = mergeStyleSets({
   },
   link: {
     color: colors.linkDefault,
-    fontWeight: 600,
-    fontSize: 16,
+    fontWeight: 700,
+    fontSize: 17,
+    letterSpacing: 0.5,
+    position: 'relative',
+    transition: 'color 0.2s',
     selectors: {
       ':hover': {
         color: colors.linkHover,
-        textDecoration: 'underline',
+        textDecoration: 'none',
+      },
+      '::after': {
+        content: '""',
+        display: 'block',
+        width: 0,
+        height: 3,
+        background: 'linear-gradient(90deg, #03df20ff 0%, #e9ec12ff 100%)',
+        borderRadius: 2,
+        transition: 'width 0.3s',
+        position: 'absolute',
+        left: 0,
+        bottom: -6,
+      },
+      ':hover::after': {
+        width: '100%',
       },
     },
   },
